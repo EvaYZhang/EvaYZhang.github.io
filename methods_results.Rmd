@@ -1,5 +1,5 @@
 ---
-title: "methods_results"
+title: "Methods and Results"
 author: "Eva Zhang"
 date: "4/24/2021"
 output: html_document
