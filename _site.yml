@@ -6,7 +6,7 @@ navbar:
     - text: "Introduction"
       href: introduction.html
     - text: "Methods and Results"
-      href: method_results.html
+      href: methods_results.html
     - text: "Conclusion"
       href: conclusion.html
 
