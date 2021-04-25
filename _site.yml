@@ -5,8 +5,10 @@ navbar:
   left:
     - text: "Introduction"
       href: introduction.html
-    - text: "Methods and Results"
+    - text: "Methods"
       href: methods_results.html
+    - text: "Results"
+      href: results.html
     - text: "Conclusion"
       href: conclusion.html
 

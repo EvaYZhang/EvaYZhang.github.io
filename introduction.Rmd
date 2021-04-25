@@ -9,22 +9,29 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Research Question
+Is there a difference between the way Prof. Alex Shpenev tweets and Prof. Eugen 
+Dimant tweets?
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
+# Methodology
+We will conduct text analysis of tweets by using sklearn in Python 
+to do machine learning.
+We split the data into test and train data, and we transform the texts of 
+tweets into numeric data by tokenizing the tweets.
 
-## Including Plots
+We use the **count vectorizer** approach to count the frequency of the words, and we 
+getting rid of words that do not have much meaning or words that are too uncommon. 
 
-You can also embed plots, for example:
+We use the **TF-IDF vectorizer** approach to calculate the frequency of 
+the words and weigh in favor of words that are relatively rare overall, since
+they might be more important compared to words that frequently appear. 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+We run a Naive **Bayes Model**. 
+Since we have a limited number of tweets, we assume each word is independent 
+from each other to develop this relatively simple model.
+
+We also use the **Linear Support Vector Classifier** approach.
+
