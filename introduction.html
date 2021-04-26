@@ -314,17 +314,17 @@ $(document).ready(function () {
 </div>
 
 
-<div id="research-question" class="section level1">
-<h1>Research Question</h1>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>We plan to extract tweets from two famous people who are reasonably different from each other in their views / speech patterns / post content.</p>
+</div>
+<div id="research-question" class="section level2">
+<h2>Research Question</h2>
 <p>Is there a difference between the way Prof. Alex Shpenev tweets and Prof. Eugen Dimant tweets?</p>
 </div>
-<div id="methodology" class="section level1">
-<h1>Methodology</h1>
-<p>We will conduct text analysis of tweets by using sklearn in Python to do machine learning. We split the data into test and train data, and we transform the texts of tweets into numeric data by tokenizing the tweets.</p>
-<p>We use the <strong>count vectorizer</strong> approach to count the frequency of the words, and we getting rid of words that do not have much meaning or words that are too uncommon.</p>
-<p>We use the <strong>TF-IDF vectorizer</strong> approach to calculate the frequency of the words and weigh in favor of words that are relatively rare overall, since they might be more important compared to words that frequently appear.</p>
-<p>We run a Naive <strong>Bayes Model</strong>. Since we have a limited number of tweets, we assume each word is independent from each other to develop this relatively simple model.</p>
-<p>We also use the <strong>Linear Support Vector Classifier</strong> approach.</p>
+<div id="motivation" class="section level2">
+<h2>Motivation</h2>
+<p>We plan to extract tweets from Prof. Alex Shpenev tweets and Prof. Eugen Dimant because they teach different subjects, have different interests (beyond behavioral science), and have different speech patterns. So we think it would be interesting to compare their tweets to see if we can build an algorithm that can identify these differences we noticed based on our observations.</p>
 </div>
 
 

@@ -12,7 +12,7 @@
 <meta name="author" content="Eva Zhang" />
 
 
-<title>Methods and Results</title>
+<title>Methodology</title>
 
 <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -307,14 +307,29 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Methods and Results</h1>
+<h1 class="title toc-ignore">Methodology</h1>
 <h4 class="author">Eva Zhang</h4>
 <h4 class="date">4/24/2021</h4>
 
 </div>
 
 
-
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>We will conduct text analysis of tweets by using sklearn in Python to do machine learning. We split the data into test and train data, and we transform the texts of tweets into numeric data by tokenizing the tweets. We develop algorithms that predict who of the two professors writes each tweet by using the text of the tweets.</p>
+<p>We use the <strong>count vectorizer</strong> approach to count the frequency of the words, and we will get rid of words that do not have much meaning or words that are too uncommon.</p>
+<p>We use the <strong>TF-IDF vectorizer</strong> approach to calculate the frequency of the words and weigh in favor of words that are relatively rare overall, since they might be more important compared to words that frequently appear.</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<p>We run a Naive <strong>Bayes Model</strong>. Since we have a limited number of tweets, we assume each word is independent from each other to develop this relatively simple model. We also use the <strong>Linear Support Vector Classifier</strong> approach.</p>
+</div>
+<div id="analysis-and-prediction" class="section level2">
+<h2>Analysis and Prediction</h2>
+<p>To analyze the tweets, we identify top words that appear in Prof. Shpenev’s and Prof. Dimant’s tweets to see if we can identify any trends.</p>
+<p>To test the prediction accuracy of our model, we apply the algorithm to new tweets from both professors.</p>
+<p>We also try the prediction algorithm with a different set of tweets from unrelated users to see if the algorithm breaks or works.</p>
+</div>
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Methods"
+title: "Methodology"
 author: "Eva Zhang"
 date: "4/24/2021"
 output: html_document
@@ -8,3 +8,35 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Overview
+We will conduct text analysis of tweets by using sklearn in Python 
+to do machine learning.
+We split the data into test and train data, and we transform the texts of 
+tweets into numeric data by tokenizing the tweets.
+We develop algorithms that predict who of the two professors writes each 
+tweet by using the text of the tweets.  
+
+We use the **count vectorizer** approach to count the frequency of the words, and we 
+will get rid of words that do not have much meaning or words that are too uncommon. 
+
+We use the **TF-IDF vectorizer** approach to calculate the frequency of 
+the words and weigh in favor of words that are relatively rare overall, since
+they might be more important compared to words that frequently appear. 
+
+## Methods
+We run a Naive **Bayes Model**. 
+Since we have a limited number of tweets, we assume each word is independent 
+from each other to develop this relatively simple model.
+We also use the **Linear Support Vector Classifier** approach.
+
+## Analysis and Prediction
+To analyze the tweets, we identify top words that appear in Prof. Shpenev's
+and Prof. Dimant's tweets to see if we can identify any trends.
+
+To test the prediction accuracy of our model, we apply the algorithm to new
+tweets from both professors. 
+
+We also try the prediction algorithm with a different set of tweets from 
+unrelated users to see if the algorithm breaks or works.
+

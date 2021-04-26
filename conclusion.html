@@ -314,7 +314,48 @@ $(document).ready(function () {
 </div>
 
 
-
+<div id="naivebayes-models" class="section level2">
+<h2>NaiveBayes Models</h2>
+<p>NaiveBayes Tfidf Score: 0.6145251396648045</p>
+<p>NaiveBayes Count Score: 0.6145251396648045</p>
+<p>The accuracy scores of our Naive Bayes models using the Tfidf and the Count approaches are similarly low. On average the models can predict the correct output 61% of times.</p>
+<p>The confusion matrix for these two approaches also visually illustrate this result. In general, the algorithm make correct predictions about <span class="citation">@shpenev</span> more often. When making predictions of <span class="citation">@eugen_dimant</span>’s tweets, the algorithm tends to still predict them to be <span class="citation">@shpenev</span>’s tweets. This means the algorithm overall tend to skew toward predicting everything as <span class="citation">@shpenev</span>’s tweets.</p>
+</div>
+<div id="linearsvc" class="section level2">
+<h2>LinearSVC</h2>
+<p>LinearSVC Score: 0.615</p>
+<p>The accuracy scores of LinearSVC approach is just so slightly higher but still around 61%. Looking at the details of confusion matrix, the prediction resutls are similar to those described and analyized above.</p>
+</div>
+<div id="top-features" class="section level2">
+<h2>Top features</h2>
+<p>To analyze the tweets, we identified top words used by <span class="citation">@shpenev</span> and <span class="citation">@eugen_dimant</span>. However, we can see based on the graph that words such as “amp,” “paper,” don," “just” are not very meaningful, even though the inclusion of these words should have been stopped.“https” means that the tweets included a lot of links," but this, again, does not show the content of the linked article and it is difficult to draw further interesting conclusion about the top tweeted words.</p>
+</div>
+<div id="prediction-1" class="section level2">
+<h2>Prediction 1</h2>
+<p>In predicting these two hypothetical tweets, “Let’s keep America Great!” and “Je voudrais du chocolat” the algorithm returns “shpenev” for both instances.</p>
+</div>
+<div id="prediction-2" class="section level2">
+<h2>Prediction 2</h2>
+<p>Next, we included several examples that were actually said by Prof. Shpenev and Prof. Dimant, or something they would say.</p>
+<ul>
+<li>Can we all just pretend tomorrow is another Sunday?</li>
+<li>Wake up dad. Our bowl is empty</li>
+<li>Don’t miss out on the opportunity to see my amazing mentor &amp; co-author Simon Gächter present new work on the logic of rule following &amp; my friend Nils NCKobis do the academic opening act on cross-cultural corruption (<a href="mailto:w/@Shaul_Shalvi" class="email">w/@Shaul_Shalvi</a>)Link: <a href="http://nobectalks.com" class="uri">http://nobectalks.com</a> #EconTwitter</li>
+</ul>
+<p>The correct predictions for the three tweets should be “shpnev” “shpnev” “eugen_dimant”. Our algorithm correctly predicts the first two but also predicts the third tweet as “shpenev.”</p>
+</div>
+<div id="prediction-3" class="section level2">
+<h2>Prediction 3</h2>
+<p>When we tried to apply the algorithm to 10 tweets from unrelated users, the algorithm returns prediction of “shpenev” for all of them, indicating a certain level bias in the model.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>We developed a very naive model that performs basic machine learning and text analysis. While our model has some accuracy in making prediction between Prof. Shpenev’s and Prof. Dimant’s tweets, there is a clear bias toward marking most tweets as Prof. Shepnev’s. With more sophisticated methods, this can be improved.</p>
+</div>
+<div id="contribution" class="section level2">
+<h2>Contribution</h2>
+<p>Analyses are attributed to Arvind Bala, Ben Birkman, Jimena Velazequez de Leon, Minglu Xu, and Eva Zhang.</p>
+</div>
 
 
 

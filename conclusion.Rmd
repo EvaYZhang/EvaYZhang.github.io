@@ -9,3 +9,64 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## NaiveBayes Models
+NaiveBayes Tfidf Score:  0.6145251396648045
+
+NaiveBayes Count Score:  0.6145251396648045
+
+The accuracy scores of our Naive Bayes models using the Tfidf and the Count 
+approaches are similarly low. On average the models can predict the correct
+output 61% of times. 
+
+The confusion matrix for these two approaches also visually illustrate this 
+result. In general, the algorithm make correct predictions about @shpenev more
+often. When making predictions of @eugen_dimant's tweets, the algorithm tends 
+to still predict them to be @shpenev's tweets. This means the algorithm overall
+tend to skew toward predicting everything as @shpenev's tweets.
+
+## LinearSVC
+LinearSVC Score:   0.615
+
+The accuracy scores of LinearSVC approach is just so slightly higher but still
+around 61%. Looking at the details of confusion matrix, the prediction resutls 
+are similar to those described and analyized above.
+
+## Top features
+To analyze the tweets, we identified top words used by @shpenev and @eugen_dimant.
+However, we can see based on the graph that words such as "amp," "paper," don,"
+"just" are not very meaningful, even though the inclusion of these words 
+should have been stopped."https" means that the tweets included a lot of links,"
+but this, again, does not show the content of the linked article and it is 
+difficult to draw further interesting conclusion about the top tweeted words.
+
+## Prediction 1
+In predicting these two hypothetical tweets, "Let's keep America Great!" and "Je voudrais du chocolat"
+the algorithm returns "shpenev" for both instances.
+
+## Prediction 2
+Next, we included several examples that were actually said by Prof. Shpenev and Prof.
+Dimant, or something they would say.
+
+* Can we all just pretend tomorrow is another Sunday?
+* Wake up dad. Our bowl is empty
+* Don’t miss out on the opportunity to see my amazing mentor & co-author Simon Gächter present new work on the logic of rule following & my friend Nils NCKobis do the academic opening act on cross-cultural corruption (w/@Shaul_Shalvi)Link: http://nobectalks.com #EconTwitter
+
+The correct predictions for the three tweets should be "shpnev" "shpnev" 
+"eugen_dimant". Our algorithm correctly predicts the first two but also
+predicts the third tweet as "shpenev."
+
+## Prediction 3 
+When we tried to apply the algorithm to 10 tweets from unrelated users,
+the algorithm returns prediction of "shpenev" for all of them, indicating
+a certain level bias in the model. 
+
+## Conclusion
+We developed a very naive model that performs basic machine learning and text
+analysis. While our model has some accuracy in making prediction between
+Prof. Shpenev's and Prof. Dimant's tweets, there is a clear bias toward marking
+most tweets as Prof. Shepnev's. With more sophisticated methods, this can be improved.
+
+## Contribution
+Analyses are attributed to Arvind Bala, Ben Birkman, Jimena Velazequez de Leon,
+Minglu Xu, and Eva Zhang.
+
