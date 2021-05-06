@@ -3,13 +3,15 @@ output_dir: "."
 navbar:
   title: "Eva Zhang"
   left:
-    - text: "Introduction"
+    - text: "Network Analysis Project"
+      href: Homework10_website.html
+    - text: "Twitter Project: Introduction"
       href: introduction.html
-    - text: "Methods"
+    - text: "Twitter Project: Methods"
       href: methods_results.html
-    - text: "Results"
+    - text: "Twitter Project: Results"
       href: results.html
-    - text: "Conclusion"
+    - text: "Twitter Project: Conclusion"
       href: conclusion.html
 
 output:
